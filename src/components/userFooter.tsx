@@ -5,9 +5,6 @@ export function UserFooter(){
     const tex:React.CSSProperties={
         textShadow:`2px 2px 4px aqua`
     }
-    const box:React.CSSProperties={
-       boxShadow:`1px 1px 4px aqua`
-    }
     return(
     <div className="w-full h-[115px] flex justify-evenly 
     items-center font-mono text-white w-full 

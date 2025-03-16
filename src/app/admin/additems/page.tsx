@@ -1,7 +1,6 @@
 "use client"
 import { z } from "zod"
 import { zodResolver } from "@hookform/resolvers/zod"
-import { useState } from "react"
 import { AdminHeader } from "@/components/adminHeader"
 import { useForm } from "react-hook-form"
 const detailsSchema=z.object({
