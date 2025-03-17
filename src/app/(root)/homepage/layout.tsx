@@ -6,7 +6,7 @@ import { UserFooter } from "@/components/userFooter";
 
 export const metadata: Metadata = {
   title: "retail store",
-  description: "stroe to purchase the retail goods",
+  description: "store to purchase the retail goods",
 };
 
 export default function RootLayout({
@@ -15,11 +15,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-       <section className="w-full h-full flex flex-col">
-          <UserHeader/>
-          {children}
-          <br/>
-          <UserFooter/>
-       </section>
+    <section className="flex flex-col min-h-screen">
+      <UserHeader />
+      <main className="flex-grow">{children}</main>
+      <UserFooter />
+    </section>
   );
 }

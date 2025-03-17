@@ -6,7 +6,7 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 const adminSchema=z.object({
     name:z.string().min(1,"Enter the admin name.")
-    .refine((val)=>val.toLowerCase()==="mirza",{
+    .refine((val)=>val.toLowerCase().trim()==="mirza",{
         message:"Incorrect admin."
     }),
     pass:z.string().min(1,"password can't be blank ")
