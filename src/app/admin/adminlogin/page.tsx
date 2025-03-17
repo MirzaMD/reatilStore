@@ -6,11 +6,11 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 const adminSchema=z.object({
     name:z.string().min(1,"Enter the admin name.")
-    .refine((val)=>val.toLowerCase().trim()==="mirza",{
+    .refine((val)=>val.toLowerCase().trim()==="hussain",{
         message:"Incorrect admin."
     }),
     pass:z.string().min(1,"password can't be blank ")
-    .refine((val)=>val.toLowerCase()==="mirza000",
+    .refine((val)=>val.toLowerCase()==="mmhb046",
     {message:"invalid password"}), 
 });
 type TadminSchema=z.infer<typeof adminSchema>

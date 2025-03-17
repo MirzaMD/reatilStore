@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useCallback, useState } from "react";
 import { Card } from "@/components/card";
+import { UserFooter } from "@/components/userFooter";
 type detailsType={
     _id:string;
     item:string;
@@ -31,6 +32,7 @@ export default function HomePage() {
   </div>
       ))}
      </div>
+     <UserFooter/>
  </div>
     );
 }
