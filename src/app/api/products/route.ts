@@ -31,7 +31,7 @@ export async function DELETE(req:Request){
 
         if(!id) throw new Error("Invalid id.");
 
-        const deletedID=await RS.findByIdAndDelete(id);
+        await RS.findByIdAndDelete(id);
       
         return NextResponse.json({message:"deleted succesfully"},{status:202})
     }

@@ -12,7 +12,7 @@ const detailsSchema=z.object({
           }),
     brand:z.string().min(1,"brand can't be blank"),  
     gender:z.string().min(1,"Item can't be blank")
-            .refine((val)=> val==="male" || val==="female" || val==="unisex",
+            .refine((val)=> val.trim().toLowerCase()==="male" || val.toLowerCase().trim()==="female" || val.trim().toLowerCase()==="unisex",
         {
             message:"Gender could only be male, female or unisex"
         })    

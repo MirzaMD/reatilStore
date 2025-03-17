@@ -6,10 +6,11 @@ export function LogoutOption({setLogoutKey}:{setLogoutKey:(cur:boolean)=>void}){
         textShadow:`2px 2px 10px aqua`
     }
     return(
-        <div className={`flex flex-col font-mono text-sm sm:text-lg text-white w-fit mr-3`} >
-            <button className="border-b-2 border-[#CCCCFF]"
+        <div className={`flex flex-col font-mono text-sm sm:text-lg 
+        text-white w-fit mr-3 gap-y-4 sm:gap-y-3 `} >
+            <button className="border-b-2 border-[#CCCCFF] bg-[#002244]"
             onClick={()=>router.replace('/')} style={tex}>Logout</button>
-            <button className="border-b-2 border-[#CCCCFF]"
+            <button className="border-b-2 border-[#CCCCFF] bg-[#002244]"
              onClick={() => setLogoutKey(true)} style={tex}>Cancel</button>
         </div>
     )
